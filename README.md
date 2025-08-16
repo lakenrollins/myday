@@ -129,3 +129,10 @@ main, always keeping it up to date.
 
 [Render.com]: https://render.com/
 [Dashboard]: https://dashboard.render.com/
+
+
+
+Make myday app logo pink
+Make aesthetics beige, black, and cream (off white)
+Make Render link tonight
+Start on frontend
