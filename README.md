@@ -135,4 +135,4 @@ main, always keeping it up to date.
 Make myday app logo pink
 Make aesthetics beige, black, and cream (off white)
 Make Render link tonight
-Start on frontend
+Start on frontend (try to get through as much as frontend as possible)
