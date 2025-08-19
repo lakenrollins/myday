@@ -6,13 +6,7 @@ echo "🔧 Installing Python dependencies..."
 pip install --upgrade pip
 pip install -r requirements.txt
 
-echo "🚀 Building React frontend..."
-cd react-vite
-npm install --only=production
-npm run build
-cd ..
-
-echo "📁 Verifying build output..."
+echo "📁 Verifying frontend build exists..."
 ls -la react-vite/dist/
 
 echo "🗄️ Running database migrations..."
