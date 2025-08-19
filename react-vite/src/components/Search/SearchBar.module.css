@@ -1,0 +1,259 @@
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.searchForm {
+  position: relative;
+}
+
+.searchInputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #e1e1e1;
+  border-radius: 24px;
+  padding: 8px 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.searchInputContainer:focus-within {
+  border-color: #e60023;
+  box-shadow: 0 0 0 3px rgba(230, 0, 35, 0.1);
+}
+
+.searchIcon {
+  color: #767676;
+  margin-right: 12px;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  min-width: 0;
+}
+
+.searchInput::placeholder {
+  color: #767676;
+}
+
+.searchInput:disabled {
+  opacity: 0.6;
+}
+
+.clearButton,
+.filterButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #767676;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+  margin-left: 8px;
+}
+
+.clearButton:hover,
+.filterButton:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.filterButton.active {
+  color: #e60023;
+  background: rgba(230, 0, 35, 0.1);
+}
+
+.loadingBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #e60023,
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 0 0 24px 24px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Suggestions Panel */
+.suggestionsPanel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e1e1e1;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestionGroup {
+  padding: 8px 0;
+}
+
+.suggestionGroup:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestionGroupTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #767676;
+  padding: 8px 16px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.suggestionItem:hover,
+.suggestionItem.selected {
+  background: #f8f8f8;
+}
+
+.suggestionButton {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+
+.suggestionIcon {
+  color: #767676;
+  margin-right: 12px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #767676;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.suggestionItem:hover .removeButton {
+  opacity: 1;
+}
+
+.removeButton:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Filters Panel */
+.filtersPanel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e1e1e1;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  padding: 16px;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filterLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #e60023;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .searchInputContainer {
+    padding: 6px 12px;
+  }
+
+  .searchInput {
+    font-size: 14px;
+  }
+
+  .filtersPanel {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .suggestionsPanel {
+    max-height: 300px;
+  }
+}

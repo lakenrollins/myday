@@ -1,0 +1,92 @@
+.gridContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.masonryGrid {
+  display: flex;
+  width: auto;
+  margin-left: calc(-1 * var(--spacing-md));
+}
+
+.masonryColumn {
+  padding-left: var(--spacing-md);
+  background-clip: padding-box;
+}
+
+.masonryColumn > div {
+  margin-bottom: var(--spacing-lg);
+}
+
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--gray-200);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl);
+  text-align: center;
+}
+
+.emptyState h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--text);
+}
+
+.emptyState p {
+  color: var(--text-light);
+  font-size: var(--font-size-base);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 400px) {
+  .gridContainer {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .gridContainer {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .gridContainer {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .gridContainer {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (min-width: 1201px) {
+  .gridContainer {
+    padding: var(--spacing-lg);
+  }
+}

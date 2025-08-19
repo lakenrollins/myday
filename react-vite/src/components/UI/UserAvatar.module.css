@@ -1,0 +1,48 @@
+.avatarImage {
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.avatarImage:hover {
+  transform: scale(1.05);
+}
+
+.avatarInitials {
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e60023, #ff4757);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.avatarInitials:hover {
+  transform: scale(1.05);
+}
+
+/* Different color variations for initials */
+.avatarInitials[data-color="blue"] {
+  background: linear-gradient(135deg, #3742fa, #5352ed);
+}
+
+.avatarInitials[data-color="green"] {
+  background: linear-gradient(135deg, #2ed573, #7bed9f);
+}
+
+.avatarInitials[data-color="purple"] {
+  background: linear-gradient(135deg, #a55eea, #d63031);
+}
+
+.avatarInitials[data-color="orange"] {
+  background: linear-gradient(135deg, #ff6348, #ff7675);
+}
+
+.avatarInitials[data-color="teal"] {
+  background: linear-gradient(135deg, #26de81, #20bf6b);
+}

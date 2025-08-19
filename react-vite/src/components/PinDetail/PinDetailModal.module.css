@@ -1,0 +1,373 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.content {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24);
+  display: flex;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #767676;
+  transition: all 0.2s ease;
+  z-index: 10000;
+}
+
+.closeButton:hover {
+  background: white;
+  color: #333;
+}
+
+.imageSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+  border-radius: 16px 0 0 16px;
+  padding: 20px;
+  position: relative;
+}
+
+.pinImage {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.detailsSection {
+  flex: 0 0 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 16px 16px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actionButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.actionButton:hover {
+  background: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.saveButton {
+  background: #e60023;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.saveButton:hover {
+  background: #d50000;
+  transform: translateY(-2px);
+}
+
+.saveButton.saved {
+  background: #767676;
+}
+
+.likeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  color: #767676;
+  transition: all 0.2s ease;
+}
+
+.likeButton.liked {
+  color: #e60023;
+}
+
+.pinTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.pinDescription {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.userAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  cursor: pointer;
+}
+
+.userName:hover {
+  text-decoration: underline;
+}
+
+.userStats {
+  font-size: 14px;
+  color: #767676;
+  margin: 2px 0 0 0;
+}
+
+.followButton {
+  background: #e60023;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.followButton:hover {
+  background: #d50000;
+}
+
+.followButton.following {
+  background: #e9e9e9;
+  color: #333;
+}
+
+.metaSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #767676;
+}
+
+.metaItem svg {
+  font-size: 16px;
+}
+
+.boardSection {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.boardInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boardInfo:hover {
+  background: #f0f0f0;
+}
+
+.boardImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.boardName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.boardCount {
+  font-size: 12px;
+  color: #767676;
+  margin: 2px 0 0 0;
+}
+
+.relatedSection {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e9e9e9;
+}
+
+.relatedTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.relatedPins {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.relatedPin {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.relatedPin:hover {
+  transform: scale(1.05);
+}
+
+.relatedPinImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.likesCount {
+  font-size: 14px;
+  color: #767676;
+  margin-left: 8px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .imageSection {
+    flex: none;
+    border-radius: 16px 16px 0 0;
+    max-height: 50vh;
+  }
+  
+  .detailsSection {
+    flex: none;
+    border-radius: 0 0 16px 16px;
+    max-height: 45vh;
+    overflow-y: auto;
+  }
+  
+  .closeButton {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .pinTitle {
+    font-size: 24px;
+  }
+  
+  .relatedPins {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 10px;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .actions {
+    justify-content: space-between;
+  }
+}

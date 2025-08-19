@@ -1,0 +1,40 @@
+.commentSection {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 16px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.loading,
+.error {
+  padding: 24px;
+  text-align: center;
+  color: #767676;
+  font-size: 14px;
+}
+
+.error {
+  color: #e60023;
+}
+
+.commentsList {
+  margin-top: 16px;
+}
+
+.noComments {
+  padding: 24px;
+  text-align: center;
+  color: #767676;
+  font-size: 14px;
+  font-style: italic;
+}

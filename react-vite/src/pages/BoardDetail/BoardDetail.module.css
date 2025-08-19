@@ -1,0 +1,440 @@
+.container {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.loading,
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #e60023;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.error p {
+  color: #767676;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f0f0;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.backButton:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.boardContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.boardHeader {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.boardCover {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.emptyCover {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 48px;
+  color: #ccc;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.boardTitle {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 12px 0;
+  line-height: 1.1;
+}
+
+.boardDescription {
+  font-size: 18px;
+  color: #767676;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boardMeta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.boardStat {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  display: block;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #767676;
+  margin-top: 4px;
+}
+
+.privacyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f7f7f7;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #767676;
+  font-weight: 600;
+}
+
+.ownerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ownerAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ownerAvatar:hover {
+  transform: scale(1.05);
+}
+
+.ownerName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.ownerName:hover {
+  color: #e60023;
+}
+
+.boardActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.followButton {
+  background: #e60023;
+  color: white;
+}
+
+.followButton:hover {
+  background: #d50000;
+  transform: translateY(-2px);
+}
+
+.followButton.following {
+  background: #e9e9e9;
+  color: #333;
+}
+
+.editButton {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.editButton:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.shareButton {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.shareButton:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.moreButton {
+  background: #f0f0f0;
+  color: #333;
+  width: 48px;
+  padding: 12px;
+  justify-content: center;
+}
+
+.moreButton:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.boardContent {
+  margin-top: 40px;
+}
+
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.contentTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.sortControls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sortButton {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.sortButton.active {
+  background: #e60023;
+  color: white;
+}
+
+.sortButton:hover {
+  background: #e0e0e0;
+}
+
+.sortButton.active:hover {
+  background: #d50000;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+  color: #767676;
+}
+
+.emptyState h3 {
+  font-size: 24px;
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.emptyState p {
+  font-size: 16px;
+  margin: 0 0 24px 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.addPinButton {
+  background: #e60023;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addPinButton:hover {
+  background: #d50000;
+  transform: translateY(-2px);
+}
+
+.pinsGrid {
+  margin-top: 20px;
+}
+
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.loadMoreButton {
+  background: #f0f0f0;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.loadMoreButton:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.loadMoreButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .boardHeader {
+    padding: 30px 15px;
+    margin-bottom: 30px;
+  }
+  
+  .boardTitle {
+    font-size: 32px;
+  }
+  
+  .boardDescription {
+    font-size: 16px;
+  }
+  
+  .boardMeta {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .boardActions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .actionButton {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  
+  .contentHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .sortControls {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .boardMeta {
+    gap: 12px;
+  }
+  
+  .boardStat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sortControls {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .sortButton {
+    flex: 1;
+    min-width: 80px;
+  }
+}

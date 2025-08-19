@@ -1,0 +1,1 @@
+export { default as PinDetail } from './PinDetail';

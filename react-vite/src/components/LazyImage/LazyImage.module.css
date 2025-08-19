@@ -1,0 +1,129 @@
+.lazyImage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.defaultPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderShimmer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.defaultFallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  color: #999;
+  gap: 8px;
+}
+
+.fallbackIcon {
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+.fallbackText {
+  font-size: 12px;
+  text-align: center;
+}
+
+.loadingIndicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #f0f0f0;
+  border-top: 2px solid #e60023;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* States */
+.loading {
+  background: #f8f8f8;
+}
+
+.loaded {
+  background: transparent;
+}
+
+.error {
+  background: #f8f8f8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fallbackIcon {
+    font-size: 24px;
+  }
+
+  .fallbackText {
+    font-size: 11px;
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+  }
+}

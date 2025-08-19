@@ -1,0 +1,174 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+}
+
+.titleSection h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.titleSection p {
+  margin: 5px 0 0 0;
+  color: #767676;
+  font-size: 14px;
+}
+
+.createButton {
+  background: #e60023;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.createButton:hover {
+  background: #cc001e;
+}
+
+.error {
+  background: #fee;
+  color: #d32f2f;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #767676;
+  font-size: 16px;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.emptyContent {
+  text-align: center;
+  max-width: 400px;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.emptyContent h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.emptyContent p {
+  margin: 0 0 30px 0;
+  color: #767676;
+  font-size: 16px;
+}
+
+.createFirstButton {
+  background: #e60023;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.createFirstButton:hover {
+  background: #cc001e;
+}
+
+.pinsGrid {
+  display: columns;
+  column-count: auto;
+  column-fill: auto;
+  column-gap: 20px;
+  column-width: 236px;
+}
+
+@media (max-width: 768px) {
+  .pinsGrid {
+    column-count: 2;
+    column-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .pinsGrid {
+    column-count: 1;
+    column-width: auto;
+  }
+}
+
+.pinWrapper {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.loadMoreButton {
+  background: #f1f1f1;
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.loadMoreButton:hover:not(:disabled) {
+  background: #e1e1e1;
+}
+
+.loadMoreButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.notLoggedIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.notLoggedIn h2 {
+  color: #767676;
+  font-weight: 400;
+}

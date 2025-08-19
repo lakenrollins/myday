@@ -1,0 +1,90 @@
+.container {
+  width: 100%;
+}
+
+.sentinel {
+  height: 1px;
+  width: 100%;
+  visibility: hidden;
+}
+
+.loadingContainer,
+.errorContainer,
+.endContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+  margin: 16px 0;
+}
+
+.defaultLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #767676;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f0f0f0;
+  border-top: 3px solid #e60023;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.defaultError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #767676;
+  text-align: center;
+}
+
+.defaultError p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.retryButton {
+  background: #e60023;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background: #cc001e;
+}
+
+.defaultEnd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #767676;
+  text-align: center;
+}
+
+.defaultEnd p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.defaultEnd span {
+  font-size: 24px;
+}

@@ -1,0 +1,83 @@
+.followButton {
+  border: none;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+}
+
+.followButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.small {
+  padding: 6px 12px;
+  font-size: 12px;
+  min-width: 60px;
+}
+
+.medium {
+  padding: 8px 16px;
+  font-size: 14px;
+  min-width: 80px;
+}
+
+.large {
+  padding: 12px 24px;
+  font-size: 16px;
+  min-width: 100px;
+}
+
+/* Variants and States */
+.primary.notFollowing {
+  background: #e60023;
+  color: white;
+}
+
+.primary.notFollowing:hover:not(:disabled) {
+  background: #cc001e;
+}
+
+.primary.following {
+  background: #f7f7f7;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.primary.following:hover:not(:disabled) {
+  background: #efefef;
+}
+
+.secondary.notFollowing {
+  background: transparent;
+  color: #e60023;
+  border: 1px solid #e60023;
+}
+
+.secondary.notFollowing:hover:not(:disabled) {
+  background: #e60023;
+  color: white;
+}
+
+.secondary.following {
+  background: transparent;
+  color: #767676;
+  border: 1px solid #ddd;
+}
+
+.secondary.following:hover:not(:disabled) {
+  color: #333;
+  border-color: #999;
+}
+
+.loadingText {
+  opacity: 0.7;
+}

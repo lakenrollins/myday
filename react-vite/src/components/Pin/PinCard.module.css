@@ -1,0 +1,238 @@
+.pinContainer {
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  margin-bottom: var(--spacing-md);
+  break-inside: avoid;
+  transition: transform var(--transition-base);
+}
+
+.pinContainer:hover {
+  transform: translateY(-2px);
+}
+
+.pinContainer:hover .pinOverlay {
+  opacity: 1;
+}
+
+.pinContainer:hover .pinImage {
+  transform: scale(1.02);
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.pinImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow);
+  border-radius: var(--radius-lg);
+}
+
+.imageFallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px 20px;
+  background: #f8f8f8;
+  color: #999;
+  text-align: center;
+}
+
+.imageFallback span {
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+.imageFallback small {
+  font-size: 12px;
+}
+
+.pinOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  border-radius: var(--radius-lg);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+}
+
+.topActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.bottomActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actionButton {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  border: none;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  background: var(--white);
+  transform: scale(1.1);
+}
+
+.actionButton svg {
+  font-size: 16px;
+}
+
+.actionGroup {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.saveButton {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-base);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+.saveButton:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.saveButton.saved {
+  background: var(--gray-700);
+}
+
+.pinInfo {
+  padding: var(--spacing-md);
+}
+
+.pinTitle {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pinUser {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.userAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.userName {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.likedIcon {
+  color: var(--primary);
+}
+
+.liked {
+  color: var(--primary) !important;
+}
+
+.likesCount {
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actionButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.manageActions {
+  display: flex;
+  gap: 8px;
+}
+
+.manageButton {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(4px);
+  color: #333;
+  font-size: 16px;
+}
+
+.manageButton:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+.deleteButton {
+  color: #d32f2f;
+}
+
+.deleteButton:hover {
+  background: rgba(211, 47, 47, 0.1);
+  color: #d32f2f;
+}
