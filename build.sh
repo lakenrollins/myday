@@ -2,29 +2,18 @@
 # Exit on error
 set -o errexit
 
-echo "🔧 Installing Python dependencies..."
-pip install --upgrade pip
+# Install dependencies
 pip install -r requirements.txt
+pip install psycopg2
 
-echo "📁 Verifying frontend build exists..."
-ls -la react-vite/dist/
+# Build frontend if needed
+cd react-vite
+npm ci --only=production
+npm run build
+cd ..
 
-echo "🗄️ Initializing database..."
-# Check if migrations directory exists, if not create it
-if [ ! -d "migrations" ]; then
-    echo "Creating migrations directory..."
-    flask db init
-fi
-
-echo "🔄 Running database migrations..."
+# Run database migrations
 flask db upgrade
 
-echo "🌱 Seeding database..."
-# Check if seed command exists before running
-if flask seed --help > /dev/null 2>&1; then
-    flask seed all
-else
-    echo "Seed command not available, skipping..."
-fi
-
-echo "✅ Build completed successfully!"
+# Seed database
+flask seed all
