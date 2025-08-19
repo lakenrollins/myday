@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 echo "🚀 Building React frontend..."
 cd react-vite
-npm ci --only=production
+npm install --only=production
 npm run build
 cd ..
 
