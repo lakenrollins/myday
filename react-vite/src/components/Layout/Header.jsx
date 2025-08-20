@@ -55,8 +55,8 @@ export const Header = ({ user, onSearch }) => {
       <div className={styles.container}>
         <div className={styles.leftSection}>
           <Link to="/" className={styles.logo}>
-            <div className={styles.logoIcon}>P</div>
-            Pinterest
+            <div className={styles.logoIcon}>M</div>
+            MyDay
           </Link>
           
           <nav className={styles.nav}>
